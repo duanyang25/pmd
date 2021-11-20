@@ -37,7 +37,10 @@ public class CPDCommandLineInterfaceTest {
     @Rule
     public TemporaryFolder tempDir = new TemporaryFolder();
 
-
+    /**
+     * CS427
+     * Setup before running tests for CPDCommandLineInterface function
+     */
     @Before
     public void setup() {
         System.setProperty(CPDCommandLineInterface.NO_EXIT_AFTER_RUN, "true");
@@ -50,6 +53,10 @@ public class CPDCommandLineInterfaceTest {
         Assert.assertEquals("<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + "\n" + "<pmd-cpd/>", log.getLog());
     }
 
+    /**
+     * Unit test for CS427
+     * Test for DeprecatedOptionsWarning
+     */
     @Test
     public void testDeprecatedOptionsWarning() throws IOException {
         File filelist = new File(tempDir.getRoot(), "cpd-test-file-list.txt");

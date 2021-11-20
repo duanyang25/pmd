@@ -68,6 +68,10 @@ public class PMDCommandLineInterfaceTest {
         assertTrue(config.getAnalysisCache() instanceof NoopAnalysisCache);
     }
 
+    /**
+     * Unit test for CS427
+     * Test for NoCacheSwitchLongOption with long options
+     */
     @Test
     public void testNoCacheSwitchLongOption() {
         PMDParameters params = new PMDParameters();

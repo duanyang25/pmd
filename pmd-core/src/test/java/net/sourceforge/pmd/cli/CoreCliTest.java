@@ -71,6 +71,10 @@ public class CoreCliTest {
         assertNotEquals(readString(reportFile), STRING_TO_REPLACE);
     }
 
+    /**
+     * Unit test for CS427
+     * Test for PreExistingReportFile with long options
+     */
     @Test
     public void testPreExistingReportFileLongOption() throws IOException {
         Path reportFile = tempRoot().resolve("out/reportFile.txt");
@@ -99,6 +103,10 @@ public class CoreCliTest {
         }
     }
 
+    /**
+     * Unit test for CS427
+     * Test for NonExistentReportFile with long options
+     */
     @Test
     public void testNonExistentReportFileLongOption() {
         Path reportFile = tempRoot().resolve("out/reportFile.txt");
@@ -110,6 +118,10 @@ public class CoreCliTest {
         assertTrue("Report file should have been created", Files.exists(reportFile));
     }
 
+    /**
+     * Unit test for CS427
+     * Test for NonExistentReportFileDeprecated with long options
+     */
     @Test
     public void testNonExistentReportFileDeprecatedOptions() {
         Path reportFile = tempRoot().resolve("out/reportFile.txt");
@@ -148,6 +160,10 @@ public class CoreCliTest {
         }
     }
 
+    /**
+     * Unit test for CS427
+     * Test for RelativeReportFile with long options
+     */
     @Test
     public void testRelativeReportFileLongOption() throws IOException {
         String reportFile = "reportFile.txt";

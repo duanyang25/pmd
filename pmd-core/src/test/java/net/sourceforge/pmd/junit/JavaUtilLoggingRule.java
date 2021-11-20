@@ -40,6 +40,10 @@ public class JavaUtilLoggingRule extends ExternalResource {
         this.customLogHandler = new StreamHandler(stream, currentLogger.getHandlers()[0].getFormatter());
     }
 
+    /**
+     * CS427
+     * Set mute mode
+     */
     public JavaUtilLoggingRule mute() {
         this.mute = true;
         return this;

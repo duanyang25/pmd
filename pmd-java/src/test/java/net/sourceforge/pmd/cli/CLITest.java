@@ -37,6 +37,10 @@ public class CLITest extends BaseCLITest {
         runTest(args, "minimalArgsWithDebug");
     }
 
+    /**
+     * Unit test for CS427
+     * Test for debugging mode
+     */
     @Test
     public void usingDebugLongOption() {
         String[] args = { "-d", SOURCE_FOLDER, "-f", "text", "-R", "category/java/design.xml", "--debug", };
@@ -72,6 +76,10 @@ public class CLITest extends BaseCLITest {
         assertTrue(FileUtil.findPatternInFile(new File(resultFilename), "Avoid empty if"));
     }
 
+    /**
+     * Unit test for CS427
+     * Test for exit status with violations And without FailOnViolations, using long option
+     */
     @Test
     public void exitStatusWithViolationsAndWithoutFailOnViolationsLongOption() {
         String[] args = { "-d", SOURCE_FOLDER, "-f", "text", "-R", "category/java/errorprone.xml", "--fail-on-violation", "false", };
