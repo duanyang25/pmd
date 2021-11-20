@@ -6,7 +6,6 @@ package net.sourceforge.pmd.cli;
 
 import static org.junit.Assert.assertTrue;
 
-import com.beust.jcommander.JCommander;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
@@ -17,6 +16,7 @@ import org.junit.contrib.java.lang.system.RestoreSystemProperties;
 import net.sourceforge.pmd.PMDConfiguration;
 import net.sourceforge.pmd.cache.NoopAnalysisCache;
 
+import com.beust.jcommander.JCommander;
 
 /**
  * Unit test for {@link PMDCommandLineInterface}
@@ -113,7 +113,7 @@ public class PMDCommandLineInterfaceTest {
      */
     @Test
     public void testPmdParametersParseResultNormal() {
-//        Constructors of PmdParametersParseResult are private
+        // Constructors of PmdParametersParseResult are private
 
         PMDParameters arguments = new PMDParameters();
         String[] args = { "--version" };
@@ -122,9 +122,7 @@ public class PMDCommandLineInterfaceTest {
         jcommander.setProgramName("PMD");
         jcommander.parse(args);
         PmdParametersParseResult result = new PmdParametersParseResult(arguments, null);
-
-
-        Assert.assertEquals(true,result.isVersion());
+        Assert.assertEquals(true, result.isVersion());
     }
 
     /**
@@ -140,8 +138,7 @@ public class PMDCommandLineInterfaceTest {
         jcommander.setProgramName("PMD");
         jcommander.parse(args);
         PmdParametersParseResult result = new PmdParametersParseResult(arguments, null);
-
-        Assert.assertEquals(false,result.isVersion());
+        Assert.assertEquals(false, result.isVersion());
     }
 
     /**
@@ -157,8 +154,7 @@ public class PMDCommandLineInterfaceTest {
         jcommander.setProgramName("PMD");
         jcommander.parse(args);
         PmdParametersParseResult result = new PmdParametersParseResult(arguments, null);
-
-        Assert.assertEquals(null,result.getDeprecatedOptionsUsed());
+        Assert.assertEquals(null, result.getDeprecatedOptionsUsed());
     }
 
     /**
@@ -174,8 +170,6 @@ public class PMDCommandLineInterfaceTest {
         jcommander.setProgramName("PMD");
         jcommander.parse(args);
         PmdParametersParseResult result = new PmdParametersParseResult(arguments, null);
-
-        Assert.assertEquals(null,result.toConfiguration());
+        Assert.assertEquals(null, result.toConfiguration());
     }
-
 }
