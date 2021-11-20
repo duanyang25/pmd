@@ -169,7 +169,6 @@ public class Cs427Test {
      */
     @Test
     public void testMain() {
-        PMDParameters params = new PMDParameters();
         String[] args = { "--help" };
 
         exit.expectSystemExit();
