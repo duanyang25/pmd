@@ -263,6 +263,10 @@ public class PMDParameters {
         return help;
     }
 
+    /**
+     * Check the --version option of CLI
+     * Returns the boolean value of --version option parsed.
+     */
     public boolean isVersion() {
         return currentVersion;
     }

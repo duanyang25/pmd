@@ -6,6 +6,7 @@ package net.sourceforge.pmd.cli;
 
 import static org.junit.Assert.assertTrue;
 
+import com.beust.jcommander.JCommander;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
@@ -98,6 +99,79 @@ public class PMDCommandLineInterfaceTest {
     public void testBuildUsageText() {
         // no exception..
         Assert.assertNotNull(PMDCommandLineInterface.buildUsageText());
+    }
+
+
+
+    /**
+     * Unit test for CS427
+     * Test for the private constructor and PmdParametersParseResult function
+     */
+    @Test
+    public void testPmdParametersParseResultNormal() {
+//        Constructors of PmdParametersParseResult are private
+
+        PMDParameters arguments = new PMDParameters();
+        String[] args = { "--version" };
+
+        JCommander jcommander = new JCommander(arguments);
+        jcommander.setProgramName("PMD");
+        jcommander.parse(args);
+        PmdParametersParseResult result = new PmdParametersParseResult(arguments, null);
+
+
+        Assert.assertEquals(true,result.isVersion());
+    }
+
+    /**
+     * Unit test for CS427
+     * Test for the private constructor and PmdParametersParseResult function
+     */
+    @Test
+    public void testPmdParametersParseResultError() {
+        PMDParameters arguments = new PMDParameters();
+        String[] args = { "--help" };
+
+        JCommander jcommander = new JCommander(arguments);
+        jcommander.setProgramName("PMD");
+        jcommander.parse(args);
+        PmdParametersParseResult result = new PmdParametersParseResult(arguments, null);
+
+        Assert.assertEquals(false,result.isVersion());
+    }
+
+    /**
+     * Unit test for CS427
+     * Test for the private constructor and GetDeprecatedOptionsUsed function
+     */
+    @Test
+    public void testGetDeprecatedOptionsUsed() {
+        PMDParameters arguments = new PMDParameters();
+        String[] args = { "-help" };
+
+        JCommander jcommander = new JCommander(arguments);
+        jcommander.setProgramName("PMD");
+        jcommander.parse(args);
+        PmdParametersParseResult result = new PmdParametersParseResult(arguments, null);
+
+        Assert.assertEquals(null,result.getDeprecatedOptionsUsed());
+    }
+
+    /**
+     * Unit test for CS427
+     * Test for the private constructor and toConfiguration function
+     */
+    @Test
+    public void testConfiguration() {
+        PMDParameters arguments = new PMDParameters();
+        String[] args = { "--version" };
+
+        JCommander jcommander = new JCommander(arguments);
+        jcommander.setProgramName("PMD");
+        jcommander.parse(args);
+        PmdParametersParseResult result = new PmdParametersParseResult(arguments, null);
+
+        Assert.assertEquals(null,result.toConfiguration());
     }
 
 }
