@@ -62,6 +62,12 @@ public final class CPDCommandLineInterface {
         System.setProperty(STATUS_CODE_PROPERTY, Integer.toString(statusCode));
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
+    /**
+     * Main program of CPD
+     * set return status after execution
+     */
     public static void main(String[] args) {
         CPDConfiguration arguments = new CPDConfiguration();
         JCommander jcommander = new JCommander(arguments);

@@ -72,6 +72,8 @@ public final class PmdParametersParseResult {
         return error;
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Returns a map of deprecated CLI options used by the command that
      * created this instance. Each key is a deprecated option that was used,
@@ -91,6 +93,8 @@ public final class PmdParametersParseResult {
         return result != null && !isHelp() && !isVersion() ? result.toConfiguration() : null;
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Parse an array of CLI parameters and returns a result (which may be failed).
      * Use this instead of {@link PMDCommandLineInterface#extractParameters(PMDParameters, String[], String)},
@@ -116,6 +120,8 @@ public final class PmdParametersParseResult {
         }
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     private static Map<String, String> filterDeprecatedOptions(String... args) {
         Map<String, String> argSet = new LinkedHashMap<>(SUGGESTED_REPLACEMENT);
         argSet.keySet().retainAll(new HashSet<>(Arrays.asList(args)));
