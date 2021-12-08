@@ -44,6 +44,8 @@ public class CPDCommandLineInterfaceTest extends BaseCPDCLITest {
         Assert.assertEquals(0, Integer.parseInt(System.getProperty(CPDCommandLineInterface.STATUS_CODE_PROPERTY)));
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Test ignore identifiers argument with failOnViolation=false with changed long options
      */

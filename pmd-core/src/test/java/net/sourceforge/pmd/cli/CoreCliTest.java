@@ -71,6 +71,8 @@ public class CoreCliTest {
         assertNotEquals(readString(reportFile), STRING_TO_REPLACE);
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for PreExistingReportFile with long options
@@ -103,6 +105,8 @@ public class CoreCliTest {
         }
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for NonExistentReportFile with long options
@@ -118,6 +122,8 @@ public class CoreCliTest {
         assertTrue("Report file should have been created", Files.exists(reportFile));
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for NonExistentReportFileDeprecated with long options
@@ -138,6 +144,8 @@ public class CoreCliTest {
         assertFalse(loggingRule.getLog().contains("Consider replacing it with --report-file"));
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * This tests to create the report file in the current working directory.
      *
@@ -160,6 +168,8 @@ public class CoreCliTest {
         }
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for RelativeReportFile with long options

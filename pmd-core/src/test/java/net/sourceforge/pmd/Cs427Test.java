@@ -40,7 +40,8 @@ public class Cs427Test {
         System.clearProperty(PMDCommandLineInterface.STATUS_CODE_PROPERTY);
     }
 
-
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for RunPMD function
@@ -52,6 +53,8 @@ public class Cs427Test {
         Assert.assertEquals(PMD.StatusCode.OK, exitCode);
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for RunPMD function
@@ -63,6 +66,8 @@ public class Cs427Test {
         Assert.assertEquals(PMD.StatusCode.OK, exitCode);
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for RunPMD function
@@ -74,6 +79,8 @@ public class Cs427Test {
         Assert.assertEquals(PMD.StatusCode.OK, exitCode);
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for RunPMD function
@@ -85,6 +92,8 @@ public class Cs427Test {
         Assert.assertEquals(PMD.StatusCode.ERROR, exitCode);
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for IsVersion function
@@ -101,6 +110,8 @@ public class Cs427Test {
         Assert.assertEquals(true, arguments.isVersion());
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for PmdParametersParseResult function
@@ -121,7 +132,8 @@ public class Cs427Test {
         // Assert.assertEquals(true,arguments.isVersion());
     }
 
-
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for ExtractParameter function
@@ -139,6 +151,8 @@ public class Cs427Test {
         Assert.assertEquals(null, result.toConfiguration());
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for FilterDeprecatedOptions function
@@ -163,6 +177,8 @@ public class Cs427Test {
         return Integer.parseInt(System.getProperty(PMDCommandLineInterface.STATUS_CODE_PROPERTY));
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for CPDCommandLineInterface.Main function

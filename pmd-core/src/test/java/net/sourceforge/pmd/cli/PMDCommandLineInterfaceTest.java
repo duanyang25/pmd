@@ -68,6 +68,8 @@ public class PMDCommandLineInterfaceTest {
         assertTrue(config.getAnalysisCache() instanceof NoopAnalysisCache);
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for NoCacheSwitchLongOption with long options
@@ -107,6 +109,8 @@ public class PMDCommandLineInterfaceTest {
 
 
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for the private constructor and PmdParametersParseResult function
@@ -125,6 +129,8 @@ public class PMDCommandLineInterfaceTest {
         Assert.assertEquals(true, result.isVersion());
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for the private constructor and PmdParametersParseResult function
@@ -141,6 +147,8 @@ public class PMDCommandLineInterfaceTest {
         Assert.assertEquals(false, result.isVersion());
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for the private constructor and GetDeprecatedOptionsUsed function
@@ -157,6 +165,8 @@ public class PMDCommandLineInterfaceTest {
         Assert.assertEquals(null, result.getDeprecatedOptionsUsed());
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for the private constructor and toConfiguration function

@@ -37,6 +37,8 @@ public class CLITest extends BaseCLITest {
         runTest(args, "minimalArgsWithDebug");
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for debugging mode
@@ -76,6 +78,8 @@ public class CLITest extends BaseCLITest {
         assertTrue(FileUtil.findPatternInFile(new File(resultFilename), "Avoid empty if"));
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for exit status with violations And without FailOnViolations, using long option

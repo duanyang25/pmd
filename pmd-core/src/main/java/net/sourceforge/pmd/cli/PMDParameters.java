@@ -263,6 +263,8 @@ public class PMDParameters {
         return help;
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Check the --version option of CLI
      * Returns the boolean value of --version option parsed.

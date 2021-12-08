@@ -53,6 +53,8 @@ public final class PmdParametersParseResult {
         return !isError() && result.isHelp();
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Returns whether parsing just requested the {@code --version} text.
      * In this case no configuration is produced.
@@ -79,6 +81,8 @@ public final class PmdParametersParseResult {
         return deprecatedOptionsUsed;
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Returns the resulting configuration if parsing succeeded and neither {@link #isHelp()} nor {@link #isVersion()} is requested.
      * Otherwise returns null.

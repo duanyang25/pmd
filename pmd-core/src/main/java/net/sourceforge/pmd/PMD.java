@@ -523,6 +523,8 @@ public class PMD {
         return runPmd(args).toInt();
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Parses the command line arguments and executes PMD. Returns the
      * status code without exiting the VM. Note that the arguments parsing

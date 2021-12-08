@@ -37,6 +37,8 @@ public class CPDCommandLineInterfaceTest {
     @Rule
     public TemporaryFolder tempDir = new TemporaryFolder();
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * CS427
      * Setup before running tests for CPDCommandLineInterface function
@@ -53,6 +55,8 @@ public class CPDCommandLineInterfaceTest {
         Assert.assertEquals("<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + "\n" + "<pmd-cpd/>", log.getLog());
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     /**
      * Unit test for CS427
      * Test for DeprecatedOptionsWarning
