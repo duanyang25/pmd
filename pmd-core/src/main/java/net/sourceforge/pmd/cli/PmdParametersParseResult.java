@@ -27,6 +27,11 @@ public final class PmdParametersParseResult {
     private final ParameterException error;
     private final Map<String, String> deprecatedOptionsUsed;
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
+    /**
+     * Constructor to show the status of deprecated options without errors
+     */
     PmdParametersParseResult(PMDParameters result,
                              Map<String, String> deprecatedOptionsUsed) {
         this.result = Objects.requireNonNull(result);
@@ -34,6 +39,11 @@ public final class PmdParametersParseResult {
         this.error = null;
     }
 
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
+    /**
+     * Constructor to show the status of deprecated options with errors
+     */
     PmdParametersParseResult(ParameterException error, Map<String, String> deprecatedOptionsUsed) {
         this.result = null;
         this.error = Objects.requireNonNull(error);
