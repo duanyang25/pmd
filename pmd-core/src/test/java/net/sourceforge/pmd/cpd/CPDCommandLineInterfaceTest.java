@@ -47,7 +47,9 @@ public class CPDCommandLineInterfaceTest {
     public void setup() {
         System.setProperty(CPDCommandLineInterface.NO_EXIT_AFTER_RUN, "true");
     }
-    
+
+    // CS427 Issue link: https://github.com/pmd/pmd/issues/3424
+    //    and sub-issue link: https://github.com/pmd/pmd/issues/3425
     @Test
     public void testEmptyResultRendering() {
         CPDCommandLineInterface.main(new String[] { "--minimum-tokens", "340", "--language", "java", "--files",
